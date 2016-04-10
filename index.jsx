@@ -2,10 +2,12 @@ require("./node_modules/bootstrap/dist/css/bootstrap.min.css")
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import SearchPage from './components/SearchPage';
+
 export class App extends React.Component {
 	render() {
 		return (
-			<div>Simple React + Babel + Bootstrap + Webpack</div>
+			<SearchPage />
 		);
 	}
 }
