@@ -11,11 +11,11 @@ export default React.createClass({
 	},
 
 	render: function() {
+		const {startSearch, currentQuery} = this.props;
 		return (
 			<div>
 				<input type="text" value={this.state.query} onChange={this.onQueryChanged} />
-				<button>Suchen</button>
-				{this.state.query}
+				<button onClick={() => startSearch(this.state.query)} disabled={currentQuery == this.state.query}>Suchen</button>
 			</div>
 		);
 	}
